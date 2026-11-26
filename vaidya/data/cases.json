@@ -1,0 +1,1932 @@
+{
+ "_note": "Case bank v1, reviewed and approved by Dr. Prasanna K.G. on 26 Nov 2026. All cases are synthetic.",
+ "cases": [
+  {
+   "id": "case01",
+   "title": "Ramesh, 42 - joint pain and morning stiffness",
+   "disease": "Amavata",
+   "difficulty": "Moderate",
+   "flags": {
+    "sama": true
+   },
+   "patient": {
+    "name": "Ramesh",
+    "age": 42,
+    "sex": "Male",
+    "occupation": "Office clerk",
+    "place": "Mangaluru"
+   },
+   "opening": "Doctor, for three months my joints are paining and swelling. Mornings are the worst, I can hardly get out of bed.",
+   "facts": [
+    {
+     "id": "pain_pattern",
+     "topics": [
+      "pain",
+      "complaint"
+     ],
+     "key": true,
+     "text": "The pain moves from joint to joint - knees, then wrists, then my fingers. It stings like a scorpion bite."
+    },
+    {
+     "id": "stiffness",
+     "topics": [
+      "timing",
+      "pain"
+     ],
+     "key": true,
+     "text": "Every morning I am stiff for more than an hour. It is worse in cold, cloudy weather and better when I put a warm compress."
+    },
+    {
+     "id": "duration",
+     "topics": [
+      "duration"
+     ],
+     "key": false,
+     "text": "It started about three months ago, slowly."
+    },
+    {
+     "id": "heaviness",
+     "topics": [
+      "energy",
+      "fever"
+     ],
+     "key": true,
+     "text": "My whole body feels heavy and tired. Some evenings I get a mild fever."
+    },
+    {
+     "id": "appetite",
+     "topics": [
+      "appetite",
+      "digestion"
+     ],
+     "key": true,
+     "text": "I have no taste for food and no real hunger."
+    },
+    {
+     "id": "bowel",
+     "topics": [
+      "bowel"
+     ],
+     "key": true,
+     "text": "Sometimes I am constipated, and sometimes the stools are sticky and smell bad."
+    },
+    {
+     "id": "diet",
+     "topics": [
+      "diet"
+     ],
+     "key": true,
+     "text": "I eat dinner late, around 10:30, usually heavy food. I have curd rice every night."
+    },
+    {
+     "id": "lifestyle",
+     "topics": [
+      "lifestyle",
+      "sleep"
+     ],
+     "key": true,
+     "text": "I sit at my desk all day and do no exercise. On weekends I sleep after lunch."
+    },
+    {
+     "id": "oil_massage",
+     "topics": [
+      "past",
+      "medication"
+     ],
+     "key": true,
+     "hidden": true,
+     "text": "A neighbour gave me an oil massage last month. After that the pain and heaviness became worse."
+    },
+    {
+     "id": "urine",
+     "topics": [
+      "urine"
+     ],
+     "key": false,
+     "text": "Urine is normal, doctor."
+    },
+    {
+     "id": "sleep_night",
+     "topics": [
+      "sleep"
+     ],
+     "key": false,
+     "text": "At night I sleep, but the pain wakes me sometimes."
+    },
+    {
+     "id": "family",
+     "topics": [
+      "family"
+     ],
+     "key": false,
+     "text": "Nobody in my family has this kind of joint problem."
+    }
+   ],
+   "examinations": {
+    "nadi": "Vata-Kapha nadi, guru (heavy).",
+    "jihva": "Sama jihva: thick white coating.",
+    "mala": "Sama mala: sticky, sinks in water.",
+    "mutra": "Normal colour and quantity.",
+    "agni": "Mandagni.",
+    "vitals": "Temperature 99.2 F, pulse 84/min, BP 124/80 mmHg.",
+    "general": "Weight 74 kg. Looks tired.",
+    "local": "Swelling and tenderness of both knees, both wrists and the small joints of both hands; joints warm to touch. Movement painful.",
+    "labs": "Not done yet."
+   },
+   "reference": {
+    "nidana": {
+     "answer": "Viruddhahara (curd at night), guru-snigdha late meals, divaswapna, avyayama, mandagni",
+     "required": [
+      [
+       "viruddha",
+       "viruddhahara",
+       "incompatible",
+       "curd at night",
+       "dadhi at night"
+      ],
+      [
+       "divaswapna",
+       "diwaswapna",
+       "day sleep",
+       "sleeping after lunch",
+       "afternoon sleep"
+      ],
+      [
+       "avyayama",
+       "no exercise",
+       "sedentary",
+       "nishchala",
+       "lack of exercise"
+      ]
+     ],
+     "optional": [
+      [
+       "guru",
+       "heavy food",
+       "snigdha",
+       "late dinner"
+      ],
+      [
+       "mandagni",
+       "weak agni",
+       "low agni"
+      ]
+     ],
+     "verses": [
+      "mn25_nidana"
+     ]
+    },
+    "rupa": {
+     "answer": "Sandhi shula and shotha, vrishchika-damshavat vedana, angamarda, gaurava, aruchi, alasya, jvara",
+     "required": [
+      [
+       "sandhi shotha",
+       "shotha",
+       "swelling",
+       "shopha"
+      ],
+      [
+       "shula",
+       "pain",
+       "vedana",
+       "ruja"
+      ],
+      [
+       "gaurava",
+       "heaviness",
+       "heavy"
+      ],
+      [
+       "aruchi",
+       "anorexia",
+       "loss of taste"
+      ]
+     ],
+     "optional": [
+      [
+       "vrishchika",
+       "scorpion"
+      ],
+      [
+       "angamarda",
+       "body ache"
+      ],
+      [
+       "alasya",
+       "lethargy"
+      ],
+      [
+       "jvara",
+       "fever"
+      ]
+     ],
+     "verses": [
+      "mn25_rupa",
+      "mn25_sandhi"
+     ]
+    },
+    "upashaya": {
+     "answer": "Relief with ushna and ruksha sweda; worse with snigdha (abhyanga), sheeta and cloudy weather",
+     "required": [
+      [
+       "ushna",
+       "warm",
+       "heat",
+       "sweda"
+      ],
+      [
+       "snigdha",
+       "oil",
+       "abhyanga",
+       "massage"
+      ]
+     ],
+     "optional": [
+      [
+       "sheeta",
+       "cold",
+       "cloudy",
+       "megha"
+      ]
+     ],
+     "verses": [
+      "mn25_nidana"
+     ]
+    },
+    "dosha": {
+     "answer": "Vata-Kapha with Ama",
+     "required": [
+      [
+       "vata",
+       "vaata"
+      ],
+      [
+       "kapha",
+       "shleshma"
+      ],
+      [
+       "ama",
+       "aama",
+       "sama"
+      ]
+     ],
+     "wrong": [
+      [
+       "pitta"
+      ]
+     ],
+     "verses": [
+      "mn25_nidana"
+     ]
+    },
+    "dushya": {
+     "answer": "Rasa (with sandhigata kapha)",
+     "required": [
+      [
+       "rasa"
+      ]
+     ],
+     "optional": [
+      [
+       "asthi"
+      ],
+      [
+       "majja"
+      ]
+     ],
+     "verses": []
+    },
+    "srotas": {
+     "answer": "Rasavaha, Asthi-majjavaha; srotodushti sanga",
+     "required": [
+      [
+       "rasavaha",
+       "rasa vaha"
+      ]
+     ],
+     "optional": [
+      [
+       "asthivaha",
+       "asthi majja",
+       "majjavaha"
+      ],
+      [
+       "sanga"
+      ]
+     ],
+     "verses": []
+    },
+    "agni": {
+     "answer": "Jatharagni manda",
+     "required": [
+      [
+       "manda",
+       "mandagni",
+       "low",
+       "weak"
+      ]
+     ],
+     "wrong": [
+      [
+       "tikshna"
+      ]
+     ],
+     "verses": [
+      "ah_ni12_mandagni"
+     ]
+    },
+    "adhishthana": {
+     "answer": "Sandhi (shleshma sthana)",
+     "required": [
+      [
+       "sandhi",
+       "joint"
+      ]
+     ],
+     "verses": [
+      "mn25_sandhi"
+     ]
+    },
+    "vyadhi": {
+     "answer": "Amavata, sama avastha",
+     "required": [
+      [
+       "amavata",
+       "aamavata",
+       "ama vata"
+      ]
+     ],
+     "optional": [
+      [
+       "sama"
+      ]
+     ],
+     "wrong": [
+      [
+       "sandhivata"
+      ],
+      [
+       "vatarakta"
+      ]
+     ],
+     "verses": [
+      "mn25_nidana"
+     ]
+    },
+    "vyavachedaka": {
+     "answer": "Vatarakta, Sandhivata, Kroshtukashirsha",
+     "required": [
+      [
+       "vatarakta",
+       "vata rakta",
+       "gout"
+      ],
+      [
+       "sandhivata",
+       "sandhi vata",
+       "osteoarthritis"
+      ]
+     ],
+     "optional": [
+      [
+       "kroshtuka"
+      ]
+     ],
+     "verses": []
+    },
+    "chikitsa_sutra": {
+     "answer": "Langhana, Ruksha Swedana, Tikta-Katu Deepana-Pachana, Virechana; Snehapana and Basti after nirama avastha",
+     "required": [
+      [
+       "langhana",
+       "fasting",
+       "light diet"
+      ],
+      [
+       "swedana",
+       "sweda",
+       "valuka"
+      ],
+      [
+       "deepana",
+       "pachana",
+       "tikta",
+       "katu"
+      ],
+      [
+       "virechana",
+       "purgation"
+      ]
+     ],
+     "optional": [
+      [
+       "basti",
+       "vaitarana"
+      ],
+      [
+       "nirama"
+      ]
+     ],
+     "verses": [
+      "cd25_chikitsa"
+     ]
+    },
+    "plan": {
+     "answer": "Langhana with laghu ahara; Valuka sweda; Shunthi or Vaishvanara churna with ushnodaka; Rasnasaptaka kashaya; Eranda taila virechana; Vaitarana basti later. Pathya: yava, kulattha, purana shali, ushnodaka. Apathya: dadhi, matsya, guda, ksheera, viruddhahara, divaswapna.",
+     "required": [
+      [
+       "shunthi",
+       "sunthi",
+       "vaishvanara",
+       "ajamodadi",
+       "rasnasaptaka",
+       "rasna",
+       "simhanada",
+       "eranda"
+      ],
+      [
+       "ushnodaka",
+       "warm water",
+       "hot water"
+      ],
+      [
+       "dadhi",
+       "curd"
+      ]
+     ],
+     "optional": [
+      [
+       "valuka"
+      ],
+      [
+       "yava",
+       "kulattha"
+      ],
+      [
+       "vaitarana"
+      ]
+     ],
+     "verses": [
+      "cd25_chikitsa"
+     ]
+    }
+   }
+  },
+  {
+   "id": "case02",
+   "title": "Suresh, 50 - frequent urination and tiredness",
+   "disease": "Prameha",
+   "difficulty": "Moderate",
+   "flags": {
+    "on_modern_medication": "metformin"
+   },
+   "patient": {
+    "name": "Suresh",
+    "age": 50,
+    "sex": "Male",
+    "occupation": "Shop owner",
+    "place": "Udupi"
+   },
+   "opening": "I am passing urine many times, even at night. And I feel tired all the time.",
+   "facts": [
+    {
+     "id": "urine",
+     "topics": [
+      "urine",
+      "complaint"
+     ],
+     "key": true,
+     "text": "I pass a lot of urine and it looks cloudy. Where I pass urine outside, ants come."
+    },
+    {
+     "id": "burning",
+     "topics": [
+      "skin",
+      "pain",
+      "energy"
+     ],
+     "key": true,
+     "text": "My palms and soles burn, and my mouth feels sweet and sticky."
+    },
+    {
+     "id": "heaviness",
+     "topics": [
+      "energy",
+      "sleep"
+     ],
+     "key": true,
+     "text": "After meals I feel heavy and sleepy."
+    },
+    {
+     "id": "weight",
+     "topics": [
+      "weight"
+     ],
+     "key": true,
+     "text": "I have put on about 10 kilos in five years."
+    },
+    {
+     "id": "lifestyle",
+     "topics": [
+      "lifestyle",
+      "sleep"
+     ],
+     "key": true,
+     "text": "I sit at the shop counter the whole day, and I sleep two hours every afternoon."
+    },
+    {
+     "id": "diet",
+     "topics": [
+      "diet",
+      "appetite"
+     ],
+     "key": true,
+     "text": "I take curd with every meal, sweets after dinner, new rice, and coffee with jaggery four times a day."
+    },
+    {
+     "id": "family",
+     "topics": [
+      "family"
+     ],
+     "key": true,
+     "text": "My father had sugar."
+    },
+    {
+     "id": "labs",
+     "topics": [
+      "tests"
+     ],
+     "key": true,
+     "text": "Last month my blood test showed fasting sugar 168 and HbA1c 7.6."
+    },
+    {
+     "id": "metformin",
+     "topics": [
+      "medication"
+     ],
+     "key": true,
+     "hidden": true,
+     "text": "Two weeks ago my family doctor started metformin tablets. I take them after food."
+    },
+    {
+     "id": "duration",
+     "topics": [
+      "duration"
+     ],
+     "key": false,
+     "text": "This has been going on for about six months."
+    },
+    {
+     "id": "bowel",
+     "topics": [
+      "bowel",
+      "digestion"
+     ],
+     "key": false,
+     "text": "Motion is okay, once a day."
+    }
+   ],
+   "examinations": {
+    "nadi": "Kapha-pradhana nadi.",
+    "jihva": "Lipta (coated) jihva.",
+    "mala": "Normal.",
+    "mutra": "Prabhuta, avila mutra (large quantity, turbid).",
+    "agni": "Vishamagni; medo-dhatvagni mandya suspected.",
+    "vitals": "BP 136/86 mmHg, pulse 80/min.",
+    "general": "Weight 82 kg, BMI 29.5, waist 102 cm.",
+    "local": "Feet: sensation normal, pulses felt, no ulcers.",
+    "labs": "FBS 168 mg/dL, HbA1c 7.6% (last month)."
+   },
+   "reference": {
+    "nidana": {
+     "answer": "Asyasukha, svapnasukha, dadhi, navanna, guda vikara, kapha-vardhaka ahara (Ch. Chi. 6.4)",
+     "required": [
+      [
+       "dadhi",
+       "curd"
+      ],
+      [
+       "asyasukha",
+       "sedentary",
+       "sitting",
+       "avyayama",
+       "no exercise"
+      ],
+      [
+       "svapnasukha",
+       "divaswapna",
+       "day sleep",
+       "afternoon sleep"
+      ],
+      [
+       "guda",
+       "jaggery",
+       "sweet",
+       "madhura"
+      ]
+     ],
+     "optional": [
+      [
+       "navanna",
+       "new rice",
+       "new grain"
+      ],
+      [
+       "kapha"
+      ]
+     ],
+     "verses": [
+      "ch_chi6_nidana"
+     ]
+    },
+    "purvarupa": {
+     "answer": "Kara-pada daha, mukha madhurya, alasya",
+     "required": [
+      [
+       "kara pada daha",
+       "karapada",
+       "burning palms",
+       "burning of palms",
+       "daha"
+      ],
+      [
+       "madhurya",
+       "sweet taste",
+       "mukha madhurya"
+      ]
+     ],
+     "optional": [
+      [
+       "alasya",
+       "lethargy"
+      ]
+     ],
+     "verses": []
+    },
+    "rupa": {
+     "answer": "Prabhuta avila mutrata, daurbalya",
+     "required": [
+      [
+       "prabhuta",
+       "excess urine",
+       "polyuria",
+       "frequent urination"
+      ],
+      [
+       "avila",
+       "turbid",
+       "cloudy"
+      ]
+     ],
+     "optional": [
+      [
+       "daurbalya",
+       "weakness",
+       "tired"
+      ]
+     ],
+     "verses": []
+    },
+    "dosha": {
+     "answer": "Kapha-pradhana tridosha",
+     "required": [
+      [
+       "kapha",
+       "shleshma"
+      ]
+     ],
+     "optional": [
+      [
+       "tridosha"
+      ]
+     ],
+     "verses": [
+      "ch_chi6_nidana"
+     ]
+    },
+    "dushya": {
+     "answer": "Meda, mamsa, kleda, rasa (with the other Prameha dushyas)",
+     "required": [
+      [
+       "meda",
+       "medas",
+       "fat"
+      ]
+     ],
+     "optional": [
+      [
+       "mamsa"
+      ],
+      [
+       "kleda"
+      ],
+      [
+       "rasa"
+      ],
+      [
+       "vasa"
+      ],
+      [
+       "shukra"
+      ]
+     ],
+     "verses": []
+    },
+    "srotas": {
+     "answer": "Mutravaha, Medovaha, Udakavaha",
+     "required": [
+      [
+       "mutravaha",
+       "mutra vaha"
+      ],
+      [
+       "medovaha",
+       "medo vaha"
+      ]
+     ],
+     "optional": [
+      [
+       "udakavaha"
+      ]
+     ],
+     "verses": []
+    },
+    "agni": {
+     "answer": "Medo-dhatvagni mandya",
+     "required": [
+      [
+       "dhatvagni",
+       "medo",
+       "manda"
+      ]
+     ],
+     "verses": []
+    },
+    "adhishthana": {
+     "answer": "Basti (mutravaha srotas)",
+     "required": [
+      [
+       "basti",
+       "bladder",
+       "mutra"
+      ]
+     ],
+     "verses": []
+    },
+    "vyadhi": {
+     "answer": "Kaphaja Prameha in a sthula (santarpanottha) patient",
+     "required": [
+      [
+       "prameha",
+       "madhumeha",
+       "diabetes"
+      ]
+     ],
+     "optional": [
+      [
+       "kaphaja"
+      ],
+      [
+       "sthula"
+      ]
+     ],
+     "verses": [
+      "ch_chi6_sthula_pramehi"
+     ]
+    },
+    "vyavachedaka": {
+     "answer": "Mutrakricchra, Mutraghata, Sthaulya without Prameha",
+     "required": [
+      [
+       "mutrakricchra",
+       "mutra kricchra",
+       "uti"
+      ]
+     ],
+     "optional": [
+      [
+       "sthaulya"
+      ],
+      [
+       "mutraghata"
+      ]
+     ],
+     "verses": []
+    },
+    "chikitsa_sutra": {
+     "answer": "Apatarpana; Shodhana by bala; Kapha-Medohara Shamana; daily vyayama",
+     "required": [
+      [
+       "apatarpana",
+       "langhana"
+      ],
+      [
+       "shodhana",
+       "vamana",
+       "virechana"
+      ],
+      [
+       "vyayama",
+       "exercise",
+       "walking"
+      ]
+     ],
+     "optional": [
+      [
+       "kapha medohara",
+       "medohara"
+      ]
+     ],
+     "verses": [
+      "ch_chi6_sthula_pramehi"
+     ]
+    },
+    "plan": {
+     "answer": "Nisha-Amalaki churna; Triphala kashaya; Chandraprabha vati; brisk walking 45 minutes daily; continue metformin with sugar monitoring. Pathya: yava, mudga, tikta shaka, purana shali. Apathya: dadhi, navanna, guda, ikshu, divaswapna.",
+     "required": [
+      [
+       "nisha",
+       "haridra",
+       "amalaki",
+       "triphala",
+       "chandraprabha",
+       "shilajatu",
+       "guduchi",
+       "nishamalaki"
+      ],
+      [
+       "yava",
+       "barley",
+       "mudga"
+      ],
+      [
+       "walk",
+       "exercise",
+       "vyayama"
+      ]
+     ],
+     "optional": [
+      [
+       "continue metformin",
+       "continue allopathic",
+       "monitor sugar",
+       "blood sugar monitoring"
+      ]
+     ],
+     "verses": [
+      "ch_chi6_sthula_pramehi"
+     ]
+    }
+   }
+  },
+  {
+   "id": "case03",
+   "title": "Divya, 28 - weight gain",
+   "disease": "Sthaulya",
+   "difficulty": "Hard",
+   "flags": {
+    "pregnancy_possible": true
+   },
+   "patient": {
+    "name": "Divya",
+    "age": 28,
+    "sex": "Female",
+    "occupation": "Software engineer",
+    "place": "Bengaluru (visiting home)"
+   },
+   "opening": "I have put on 15 kilos in two years. I want to lose weight quickly. Can you give me a strong treatment?",
+   "facts": [
+    {
+     "id": "hunger",
+     "topics": [
+      "appetite",
+      "diet"
+     ],
+     "key": true,
+     "text": "I am always hungry and thirsty. I keep eating snacks at my desk, and I order sweets late at night."
+    },
+    {
+     "id": "sweat",
+     "topics": [
+      "skin",
+      "breathing",
+      "energy"
+     ],
+     "key": true,
+     "text": "I sweat a lot and there is body odour. I get breathless climbing stairs, and I feel sleepy and lazy."
+    },
+    {
+     "id": "lifestyle",
+     "topics": [
+      "lifestyle",
+      "sleep"
+     ],
+     "key": true,
+     "text": "I work from home and sit 10 to 12 hours. No exercise. I sleep after lunch."
+    },
+    {
+     "id": "weight",
+     "topics": [
+      "weight",
+      "complaint",
+      "duration"
+     ],
+     "key": true,
+     "text": "I was 69 kilos two years ago. Now I am 84."
+    },
+    {
+     "id": "married",
+     "topics": [
+      "personal"
+     ],
+     "key": false,
+     "text": "I got married eight months ago."
+    },
+    {
+     "id": "lmp",
+     "topics": [
+      "menses"
+     ],
+     "key": true,
+     "hidden": true,
+     "text": "My last period was about seven weeks ago. I have not done a pregnancy test."
+    },
+    {
+     "id": "bowel",
+     "topics": [
+      "bowel",
+      "digestion"
+     ],
+     "key": false,
+     "text": "Motion is fine."
+    },
+    {
+     "id": "family",
+     "topics": [
+      "family"
+     ],
+     "key": false,
+     "text": "My mother is also on the heavier side."
+    },
+    {
+     "id": "medication",
+     "topics": [
+      "medication",
+      "past"
+     ],
+     "key": false,
+     "text": "I am not taking any medicines. I tried some diet apps but gave up."
+    }
+   ],
+   "examinations": {
+    "nadi": "Kapha-Vata nadi.",
+    "jihva": "Lipta jihva.",
+    "mala": "Normal.",
+    "mutra": "Normal.",
+    "agni": "Tikshna jatharagni (excess hunger); medo-dhatvagni manda.",
+    "vitals": "BP 122/78 mmHg, pulse 82/min.",
+    "general": "Weight 84 kg, height 160 cm, BMI 32.8, waist 98 cm. Chala sphik-udara-stana (flabby buttocks, abdomen, breasts).",
+    "local": "No other abnormal findings.",
+    "labs": "Not done. (Urine pregnancy test not done.)"
+   },
+   "reference": {
+    "nidana": {
+     "answer": "Atisampurana, guru-madhura-sheeta-snigdha ahara, avyayama, divaswapna",
+     "required": [
+      [
+       "atisampurana",
+       "overeating",
+       "excess eating",
+       "snacks"
+      ],
+      [
+       "avyayama",
+       "no exercise",
+       "sedentary"
+      ],
+      [
+       "divaswapna",
+       "day sleep",
+       "sleep after lunch"
+      ]
+     ],
+     "optional": [
+      [
+       "madhura",
+       "sweets",
+       "sweet"
+      ],
+      [
+       "guru",
+       "snigdha"
+      ]
+     ],
+     "verses": [
+      "ch_su21_nidana"
+     ]
+    },
+    "rupa": {
+     "answer": "Chala sphik-udara-stana, kshudha and pipasa atimatra, sveda-abadha, daurgandhya, kshudra shvasa, alasya",
+     "required": [
+      [
+       "chala",
+       "flabby",
+       "sphik",
+       "udara"
+      ],
+      [
+       "kshudha",
+       "hunger",
+       "pipasa",
+       "thirst"
+      ],
+      [
+       "sveda",
+       "sweat",
+       "daurgandhya",
+       "odour",
+       "odor"
+      ]
+     ],
+     "optional": [
+      [
+       "shvasa",
+       "breathless"
+      ],
+      [
+       "alasya"
+      ]
+     ],
+     "verses": [
+      "ch_su21_ashtadosha"
+     ]
+    },
+    "dosha": {
+     "answer": "Kapha, with Vata (samana) obstructed by meda in the koshtha",
+     "required": [
+      [
+       "kapha",
+       "shleshma"
+      ],
+      [
+       "vata",
+       "samana"
+      ]
+     ],
+     "verses": [
+      "ch_su21_samprapti"
+     ]
+    },
+    "dushya": {
+     "answer": "Meda (with rasa, mamsa)",
+     "required": [
+      [
+       "meda",
+       "medas",
+       "fat"
+      ]
+     ],
+     "optional": [
+      [
+       "rasa"
+      ],
+      [
+       "mamsa"
+      ]
+     ],
+     "verses": []
+    },
+    "srotas": {
+     "answer": "Medovaha",
+     "required": [
+      [
+       "medovaha",
+       "medo vaha"
+      ]
+     ],
+     "verses": []
+    },
+    "agni": {
+     "answer": "Jatharagni tikshna; medo-dhatvagni manda",
+     "required": [
+      [
+       "tikshna",
+       "increased",
+       "sharp"
+      ]
+     ],
+     "optional": [
+      [
+       "dhatvagni",
+       "medo"
+      ]
+     ],
+     "verses": [
+      "ch_su21_samprapti"
+     ]
+    },
+    "adhishthana": {
+     "answer": "Sphik, udara, stana (medo sthana)",
+     "required": [
+      [
+       "udara",
+       "abdomen",
+       "sphik",
+       "stana",
+       "sarva sharira",
+       "whole body"
+      ]
+     ],
+     "verses": []
+    },
+    "vyadhi": {
+     "answer": "Sthaulya (Medoroga)",
+     "required": [
+      [
+       "sthaulya",
+       "medoroga",
+       "obesity",
+       "atisthaulya"
+      ]
+     ],
+     "verses": [
+      "ch_su21_ashtadosha"
+     ]
+    },
+    "vyavachedaka": {
+     "answer": "Pregnancy-related weight gain; hypothyroidism-related weight gain; Shotha",
+     "required": [
+      [
+       "pregnancy",
+       "pregnan",
+       "garbha"
+      ]
+     ],
+     "optional": [
+      [
+       "thyroid"
+      ],
+      [
+       "shotha",
+       "oedema",
+       "edema"
+      ]
+     ],
+     "verses": []
+    },
+    "chikitsa_sutra": {
+     "answer": "Guru-apatarpana; Vata-Shleshma-Medohara; Ruksha Udvartana; Lekhana - only after pregnancy is excluded",
+     "required": [
+      [
+       "apatarpana",
+       "guru"
+      ],
+      [
+       "udvartana",
+       "ruksha"
+      ],
+      [
+       "medohara",
+       "lekhana"
+      ]
+     ],
+     "optional": [
+      [
+       "pregnancy test",
+       "upt",
+       "exclude pregnancy",
+       "rule out pregnancy"
+      ]
+     ],
+     "verses": [
+      "ch_su21_chikitsa",
+      "ch_su21_chikitsa2"
+     ]
+    },
+    "plan": {
+     "answer": "First a urine pregnancy test. If not pregnant: Ruksha Udvartana with Triphala or Kola-kulatthadi churna; Navaka or Triphala Guggulu; honey water in the morning; walking and yoga. If pregnant: no Lekhana, Shodhana or tikshna drugs; refer for antenatal care.",
+     "required": [
+      [
+       "pregnancy test",
+       "upt",
+       "urine pregnancy",
+       "beta hcg",
+       "rule out pregnancy",
+       "exclude pregnancy"
+      ],
+      [
+       "walk",
+       "exercise",
+       "yoga",
+       "vyayama"
+      ]
+     ],
+     "optional": [
+      [
+       "udvartana"
+      ],
+      [
+       "guggulu",
+       "triphala"
+      ],
+      [
+       "honey"
+      ]
+     ],
+     "verses": [
+      "ch_su21_chikitsa2",
+      "garbhini_caution"
+     ]
+    }
+   }
+  },
+  {
+   "id": "case04",
+   "title": "Kiran, 46 - burning in the chest after food",
+   "disease": "Amlapitta",
+   "difficulty": "Hard",
+   "flags": {
+    "red_flag_case": true
+   },
+   "patient": {
+    "name": "Kiran",
+    "age": 46,
+    "sex": "Male",
+    "occupation": "Bank manager",
+    "place": "Puttur"
+   },
+   "opening": "There is burning in my chest and throat after food, and sour water comes up to my mouth.",
+   "facts": [
+    {
+     "id": "belching",
+     "topics": [
+      "digestion",
+      "complaint"
+     ],
+     "key": true,
+     "text": "I get sour, sometimes bitter belching, and I feel like vomiting. My stomach feels heavy after meals."
+    },
+    {
+     "id": "headache",
+     "topics": [
+      "pain"
+     ],
+     "key": false,
+     "text": "On busy days I also get a headache."
+    },
+    {
+     "id": "triggers",
+     "topics": [
+      "timing",
+      "diet"
+     ],
+     "key": true,
+     "text": "It is worse after spicy food, pickles, late dinners, and tea on an empty stomach. Cold milk gives some relief."
+    },
+    {
+     "id": "habits",
+     "topics": [
+      "diet",
+      "lifestyle",
+      "sleep"
+     ],
+     "key": true,
+     "text": "I skip breakfast and drink five or six cups of tea a day. Work is stressful, and I sleep after midnight."
+    },
+    {
+     "id": "antacid",
+     "topics": [
+      "medication"
+     ],
+     "key": false,
+     "text": "Most nights I take an antacid syrup."
+    },
+    {
+     "id": "melena",
+     "topics": [
+      "bowel"
+     ],
+     "key": true,
+     "hidden": true,
+     "text": "Last week, twice, my stools were black, like tar."
+    },
+    {
+     "id": "weight_loss",
+     "topics": [
+      "weight",
+      "appetite"
+     ],
+     "key": true,
+     "hidden": true,
+     "text": "I have lost about 4 kilos in two months without trying."
+    },
+    {
+     "id": "duration",
+     "topics": [
+      "duration"
+     ],
+     "key": false,
+     "text": "On and off for about a year, but worse for the last two months."
+    },
+    {
+     "id": "family",
+     "topics": [
+      "family"
+     ],
+     "key": false,
+     "text": "My father had stomach ulcer problems."
+    }
+   ],
+   "examinations": {
+    "nadi": "Pitta-Kapha nadi.",
+    "jihva": "Slightly coated, red tip.",
+    "mala": "Patient reports black stools twice last week (if asked).",
+    "mutra": "Normal.",
+    "agni": "Vidagdhajirna; mandagni.",
+    "vitals": "Pulse 92/min, BP 118/76 mmHg.",
+    "general": "Mild pallor of conjunctiva. Weight 64 kg (68 kg two months ago).",
+    "local": "Mild tenderness in the epigastrium. No mass felt.",
+    "labs": "Not done."
+   },
+   "reference": {
+    "nidana": {
+     "answer": "Viruddha, dushta, amla, vidahi, pitta-prakopaka annapana; vegadharana; ratri jagarana; chinta",
+     "required": [
+      [
+       "amla",
+       "sour",
+       "pickle"
+      ],
+      [
+       "vidahi",
+       "spicy",
+       "katu",
+       "teekshna"
+      ],
+      [
+       "ratri jagarana",
+       "late night",
+       "sleep after midnight",
+       "night awakening"
+      ]
+     ],
+     "optional": [
+      [
+       "chinta",
+       "stress"
+      ],
+      [
+       "tea",
+       "empty stomach"
+      ],
+      [
+       "viruddha"
+      ]
+     ],
+     "verses": [
+      "mn51_nidana"
+     ]
+    },
+    "rupa": {
+     "answer": "Avipaka, utklesha, tikta-amla udgara, hrit-kantha daha, aruchi",
+     "required": [
+      [
+       "udgara",
+       "belching",
+       "eructation"
+      ],
+      [
+       "daha",
+       "burning"
+      ]
+     ],
+     "optional": [
+      [
+       "avipaka",
+       "indigestion"
+      ],
+      [
+       "utklesha",
+       "nausea"
+      ],
+      [
+       "gaurava",
+       "heaviness"
+      ]
+     ],
+     "verses": [
+      "mn51_rupa"
+     ]
+    },
+    "dosha": {
+     "answer": "Pitta (with Kapha)",
+     "required": [
+      [
+       "pitta"
+      ]
+     ],
+     "optional": [
+      [
+       "kapha"
+      ]
+     ],
+     "verses": [
+      "mn51_nidana"
+     ]
+    },
+    "dushya": {
+     "answer": "Rasa",
+     "required": [
+      [
+       "rasa"
+      ]
+     ],
+     "verses": []
+    },
+    "srotas": {
+     "answer": "Annavaha, Rasavaha",
+     "required": [
+      [
+       "annavaha",
+       "anna vaha"
+      ]
+     ],
+     "optional": [
+      [
+       "rasavaha"
+      ]
+     ],
+     "verses": []
+    },
+    "agni": {
+     "answer": "Vidagdhajirna; mandagni",
+     "required": [
+      [
+       "vidagdha",
+       "manda",
+       "mandagni"
+      ]
+     ],
+     "verses": []
+    },
+    "adhishthana": {
+     "answer": "Amashaya",
+     "required": [
+      [
+       "amashaya",
+       "stomach"
+      ]
+     ],
+     "verses": []
+    },
+    "vyadhi": {
+     "answer": "Urdhvaga Amlapitta - with alarm features needing referral first",
+     "required": [
+      [
+       "amlapitta",
+       "amla pitta"
+      ]
+     ],
+     "optional": [
+      [
+       "urdhvaga"
+      ],
+      [
+       "refer",
+       "endoscopy",
+       "alarm"
+      ]
+     ],
+     "verses": [
+      "mn51_rupa"
+     ]
+    },
+    "vyavachedaka": {
+     "answer": "Parinama shula, Annadrava shula, Gulma; and malignancy or bleeding peptic ulcer (to be ruled out by endoscopy)",
+     "required": [
+      [
+       "ulcer",
+       "malignan",
+       "cancer",
+       "bleeding",
+       "parinama shula",
+       "annadrava"
+      ]
+     ],
+     "verses": []
+    },
+    "chikitsa_sutra": {
+     "answer": "First: refer for upper GI endoscopy (melena, weight loss, pallor). Then: Nidana parivarjana; Vamana for urdhvaga, then mridu Virechana; Tikta-Madhura Shamana",
+     "required": [
+      [
+       "refer",
+       "endoscopy",
+       "gastroenterolog",
+       "hospital"
+      ],
+      [
+       "nidana parivarjana",
+       "avoid cause",
+       "avoid causes"
+      ]
+     ],
+     "optional": [
+      [
+       "vamana"
+      ],
+      [
+       "virechana"
+      ],
+      [
+       "tikta"
+      ]
+     ],
+     "verses": [
+      "redflag_gi"
+     ]
+    },
+    "plan": {
+     "answer": "Urgent referral for upper GI endoscopy and blood count before treating. After clearance: Avipattikara churna before food; Yashtimadhu churna with milk; Kamadugha rasa; regular meals; avoid tea on empty stomach, spicy and sour food.",
+     "required": [
+      [
+       "refer",
+       "endoscopy",
+       "gastroenterolog",
+       "hospital"
+      ]
+     ],
+     "optional": [
+      [
+       "avipattikara"
+      ],
+      [
+       "yashtimadhu",
+       "yashti"
+      ],
+      [
+       "kamadugha"
+      ],
+      [
+       "regular meal",
+       "meal time"
+      ]
+     ],
+     "verses": [
+      "redflag_gi"
+     ]
+    }
+   }
+  },
+  {
+   "id": "case05",
+   "title": "Ananya, 24 - breathlessness at night",
+   "disease": "Tamaka Shvasa",
+   "difficulty": "Easy to moderate",
+   "flags": {
+    "on_modern_medication": "inhaler"
+   },
+   "patient": {
+    "name": "Ananya",
+    "age": 24,
+    "sex": "Female",
+    "occupation": "Postgraduate student",
+    "place": "Moodubidire"
+   },
+   "opening": "I get breathless with a whistling sound in my chest, mostly at night. I have to sit up to breathe.",
+   "facts": [
+    {
+     "id": "triggers",
+     "topics": [
+      "timing",
+      "diet"
+     ],
+     "key": true,
+     "text": "It is worse in winter, in cloudy weather, with dust, and after cold drinks or ice cream."
+    },
+    {
+     "id": "cough",
+     "topics": [
+      "breathing"
+     ],
+     "key": true,
+     "text": "I cough up sticky phlegm, it is hard to bring out. Once it comes out, breathing becomes easier."
+    },
+    {
+     "id": "posture",
+     "topics": [
+      "breathing",
+      "sleep",
+      "timing"
+     ],
+     "key": true,
+     "text": "Sitting up and warm drinks make me feel better. Lying down makes it worse."
+    },
+    {
+     "id": "duration",
+     "topics": [
+      "duration",
+      "past"
+     ],
+     "key": true,
+     "text": "I have had these attacks since childhood."
+    },
+    {
+     "id": "family",
+     "topics": [
+      "family"
+     ],
+     "key": true,
+     "text": "My mother has asthma."
+    },
+    {
+     "id": "inhaler",
+     "topics": [
+      "medication"
+     ],
+     "key": true,
+     "hidden": true,
+     "text": "I use a salbutamol inhaler three or four times a week."
+    },
+    {
+     "id": "appetite",
+     "topics": [
+      "appetite",
+      "digestion",
+      "bowel"
+     ],
+     "key": false,
+     "text": "Appetite is okay. Sometimes indigestion."
+    },
+    {
+     "id": "menses",
+     "topics": [
+      "menses"
+     ],
+     "key": false,
+     "text": "Periods are regular."
+    }
+   ],
+   "examinations": {
+    "nadi": "Kapha-Vata nadi.",
+    "jihva": "White coating.",
+    "mala": "Normal.",
+    "mutra": "Normal.",
+    "agni": "Mandagni.",
+    "vitals": "Respiratory rate 20/min, SpO2 96% on room air, pulse 88/min. Speaks in full sentences.",
+    "general": "Not in distress at present.",
+    "local": "Mild wheeze on both sides of the chest on auscultation.",
+    "labs": "Not done."
+   },
+   "reference": {
+    "nidana": {
+     "answer": "Sheeta ahara and vihara, raja-dhuma (dust), sheeta jala, kapha-vardhaka ahara; family history",
+     "required": [
+      [
+       "sheeta",
+       "cold"
+      ],
+      [
+       "raja",
+       "dust",
+       "dhuma",
+       "smoke"
+      ]
+     ],
+     "optional": [
+      [
+       "kapha"
+      ],
+      [
+       "family",
+       "hereditary"
+      ]
+     ],
+     "verses": [
+      "ch_chi17_tamaka"
+     ]
+    },
+    "rupa": {
+     "answer": "Ghurghuraka with shvasa, kricchra kapha nishthivana, relief after expectoration, worse lying down, relief on sitting",
+     "required": [
+      [
+       "ghurghuraka",
+       "ghurghur",
+       "wheeze",
+       "whistling"
+      ],
+      [
+       "kapha",
+       "phlegm",
+       "sputum",
+       "nishthivana"
+      ],
+      [
+       "sitting",
+       "asino",
+       "sit up"
+      ]
+     ],
+     "optional": [
+      [
+       "lying",
+       "shayana"
+      ]
+     ],
+     "verses": [
+      "ch_chi17_tamaka"
+     ]
+    },
+    "upashaya": {
+     "answer": "Ushna relieves; megha, sheeta and shleshmala aggravate",
+     "required": [
+      [
+       "ushna",
+       "warm",
+       "hot"
+      ]
+     ],
+     "optional": [
+      [
+       "megha",
+       "cloud"
+      ],
+      [
+       "sheeta",
+       "cold"
+      ]
+     ],
+     "verses": [
+      "ch_chi17_tamaka"
+     ]
+    },
+    "dosha": {
+     "answer": "Kapha-Vata (Vata obstructed by Kapha)",
+     "required": [
+      [
+       "kapha",
+       "shleshma"
+      ],
+      [
+       "vata"
+      ]
+     ],
+     "wrong": [
+      [
+       "pitta"
+      ]
+     ],
+     "verses": [
+      "ch_chi17_tamaka"
+     ]
+    },
+    "dushya": {
+     "answer": "Rasa",
+     "required": [
+      [
+       "rasa"
+      ]
+     ],
+     "verses": []
+    },
+    "srotas": {
+     "answer": "Pranavaha (origin in amashaya)",
+     "required": [
+      [
+       "pranavaha",
+       "prana vaha"
+      ]
+     ],
+     "optional": [
+      [
+       "amashaya",
+       "pittasthana"
+      ]
+     ],
+     "verses": []
+    },
+    "agni": {
+     "answer": "Manda",
+     "required": [
+      [
+       "manda",
+       "mandagni",
+       "weak"
+      ]
+     ],
+     "verses": []
+    },
+    "adhishthana": {
+     "answer": "Urah (chest), pranavaha srotas",
+     "required": [
+      [
+       "urah",
+       "uras",
+       "chest",
+       "lung",
+       "phupphusa"
+      ]
+     ],
+     "verses": []
+    },
+    "vyadhi": {
+     "answer": "Tamaka Shvasa (yapya)",
+     "required": [
+      [
+       "tamaka",
+       "bronchial asthma",
+       "asthma"
+      ]
+     ],
+     "optional": [
+      [
+       "yapya"
+      ]
+     ],
+     "verses": [
+      "ch_chi17_tamaka"
+     ]
+    },
+    "vyavachedaka": {
+     "answer": "Kshudra shvasa, Kasa, Hridroga-janya shvasa",
+     "required": [
+      [
+       "kshudra",
+       "kasa",
+       "cardiac",
+       "hridroga"
+      ]
+     ],
+     "verses": []
+    },
+    "chikitsa_sutra": {
+     "answer": "Snehana (lavana taila on the chest) with Swedana; Vamana or Virechana by bala; Kapha-Vatahara ushna Shamana",
+     "required": [
+      [
+       "snehana",
+       "abhyanga",
+       "taila"
+      ],
+      [
+       "swedana",
+       "sweda",
+       "steam",
+       "fomentation"
+      ]
+     ],
+     "optional": [
+      [
+       "vamana"
+      ],
+      [
+       "virechana"
+      ],
+      [
+       "ushna"
+      ]
+     ],
+     "verses": [
+      "ch_chi17_chikitsa"
+     ]
+    },
+    "plan": {
+     "answer": "Sitopaladi churna with honey; Vasavaleha; Kanakasava; Talisadi churna; ushnodaka; continue the salbutamol inhaler as rescue medication. Pathya: purana shali, kulattha, mudga, warm water, steam. Apathya: dadhi, cold drinks, ice cream, dust exposure, day sleep.",
+     "required": [
+      [
+       "sitopaladi",
+       "talisadi",
+       "vasavaleha",
+       "vasa",
+       "kanakasava",
+       "agastya",
+       "haridrakhanda",
+       "kantakari",
+       "pippali"
+      ],
+      [
+       "ushnodaka",
+       "warm water",
+       "hot water"
+      ]
+     ],
+     "optional": [
+      [
+       "continue inhaler",
+       "keep inhaler",
+       "rescue inhaler",
+       "inhaler as needed"
+      ],
+      [
+       "cold drinks",
+       "ice cream",
+       "dadhi",
+       "curd"
+      ]
+     ],
+     "verses": [
+      "ch_chi17_chikitsa"
+     ]
+    }
+   }
+  }
+ ]
+}

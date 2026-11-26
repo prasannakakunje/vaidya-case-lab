@@ -1,0 +1,7 @@
+# For Google Colab or any machine with an NVIDIA GPU (full-precision AyurParam).
+gradio==5.50.0
+huggingface_hub>=0.25,<1.0
+rank_bm25>=0.2.2
+rapidfuzz>=3.0
+transformers>=4.53
+accelerate>=0.30

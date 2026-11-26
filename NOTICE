@@ -1,0 +1,9 @@
+vAIdya Case Lab
+Copyright 2026 Dr. Prasanna K.G. (Team vAIdya)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This software uses AyurParam (bharatgenai/AyurParam), an open Ayurveda language
+model by BharatGen, IIT Bombay, and a community 4-bit GGUF conversion of it
+(A-Aryam/AyurParam-GGUF). The model weights are not included in this repository;
+they are downloaded from Hugging Face at run time under their own licences.

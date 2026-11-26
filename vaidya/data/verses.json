@@ -1,0 +1,509 @@
+{
+ "_note": "Pramana library v1. Reviewed and approved by Dr. Prasanna K.G. (Professor & HoD, Kayachikitsa) on 26 Nov 2026. Sanskrit in IAST, typed from standard editions; verse numbering differs between editions. 'meaning' is a plain-English summary, not a translation. Entries with an empty 'sanskrit' field are meaning-only; the verse text is to be added.",
+ "verses": [
+  {
+   "id": "ah_su1_roga",
+   "text": "Ashtanga Hridaya",
+   "location": "Sutrasthana 1.20",
+   "topic": "Definition of health and disease",
+   "sanskrit": "rogastu doṣavaiṣamyaṃ doṣasāmyam arogatā",
+   "meaning": "Disease is imbalance of the doshas; balance of the doshas is health.",
+   "keywords": [
+    "roga",
+    "arogya",
+    "dosha",
+    "health",
+    "disease",
+    "imbalance",
+    "definition"
+   ],
+   "verified": true
+  },
+  {
+   "id": "su_su15_svastha",
+   "text": "Sushruta Samhita",
+   "location": "Sutrasthana 15.41",
+   "topic": "Signs of a healthy person (svastha lakshana)",
+   "sanskrit": "samadoṣaḥ samāgniśca samadhātumalakriyaḥ / prasannātmendriyamanāḥ svastha ityabhidhīyate",
+   "meaning": "A healthy person has balanced doshas and agni, normal functioning of dhatus and malas, and a clear, content self, senses and mind.",
+   "keywords": [
+    "svastha",
+    "healthy",
+    "health",
+    "agni",
+    "dhatu",
+    "mala",
+    "mind"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_su1_dosha",
+   "text": "Charaka Samhita",
+   "location": "Sutrasthana 1.57",
+   "topic": "Bodily and mental doshas",
+   "sanskrit": "vāyuḥ pittaṃ kaphaścoktaḥ śārīro doṣasaṃgrahaḥ / mānasaḥ punaruddiṣṭo rajaśca tama eva ca",
+   "meaning": "Vata, pitta and kapha are the bodily doshas; rajas and tamas are the doshas of the mind.",
+   "keywords": [
+    "dosha",
+    "vata",
+    "pitta",
+    "kapha",
+    "rajas",
+    "tamas",
+    "manasa",
+    "mind"
+   ],
+   "verified": true
+  },
+  {
+   "id": "mn1_nidanapanchaka",
+   "text": "Madhava Nidana",
+   "location": "1.4",
+   "topic": "Nidana Panchaka - five means of diagnosis",
+   "sanskrit": "nidānaṃ pūrvarūpāṇi rūpāṇyupaśayastathā / samprāptiśceti vijñānaṃ rogāṇāṃ pañcadhā smṛtam",
+   "meaning": "A disease is understood through five means: cause, prodromal signs, signs and symptoms, upashaya (diagnostic response) and samprapti (pathogenesis).",
+   "keywords": [
+    "nidana",
+    "panchaka",
+    "diagnosis",
+    "purvarupa",
+    "rupa",
+    "upashaya",
+    "samprapti",
+    "pathogenesis"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ah_ni12_mandagni",
+   "text": "Ashtanga Hridaya",
+   "location": "Nidanasthana 12.1",
+   "topic": "Mandagni as the root of disease",
+   "sanskrit": "rogāḥ sarve'pi mande'gnau sutarāmudarāṇi ca",
+   "meaning": "All diseases arise when agni is weak, udara roga most of all.",
+   "keywords": [
+    "agni",
+    "mandagni",
+    "digestion",
+    "appetite",
+    "udara",
+    "cause",
+    "root"
+   ],
+   "verified": true
+  },
+  {
+   "id": "mn25_nidana",
+   "text": "Madhava Nidana",
+   "location": "Amavata Nidana 25.1-5",
+   "topic": "Amavata - causes and pathogenesis",
+   "sanskrit": "viruddhāhāraceṣṭasya mandāgnerniścalasya ca / snigdhaṃ bhuktavato hyannaṃ vyāyāmaṃ kurvatastathā // vāyunā prerito hyāmaḥ śleṣmasthānaṃ pradhāvati / ...",
+   "meaning": "Amavata arises in one with incompatible diet and conduct, weak agni and a sedentary life, or who exercises after a heavy, unctuous meal; ama, propelled by vata, moves to the seats of kapha (the joints).",
+   "keywords": [
+    "amavata",
+    "ama",
+    "joint",
+    "cause",
+    "nidana",
+    "samprapti",
+    "viruddha",
+    "mandagni",
+    "sedentary",
+    "rheumatoid",
+    "vata",
+    "kapha"
+   ],
+   "verified": true
+  },
+  {
+   "id": "mn25_rupa",
+   "text": "Madhava Nidana",
+   "location": "Amavata Nidana 25.6",
+   "topic": "Amavata - general signs",
+   "sanskrit": "aṅgamardo'ruciścatṛṣṇā hyālasyaṃ gauravaṃ jvaraḥ / apākaḥ śūnatāṅgānāmāmavātasya lakṣaṇam",
+   "meaning": "Body ache, loss of taste, thirst, lethargy, heaviness, fever, indigestion and swelling of the body parts are the signs of Amavata.",
+   "keywords": [
+    "amavata",
+    "rupa",
+    "lakshana",
+    "symptoms",
+    "signs",
+    "angamarda",
+    "aruchi",
+    "gaurava",
+    "jvara",
+    "swelling",
+    "heaviness"
+   ],
+   "verified": true
+  },
+  {
+   "id": "mn25_sandhi",
+   "text": "Madhava Nidana",
+   "location": "Amavata Nidana 25 (pravriddha lakshana)",
+   "topic": "Amavata - joint involvement, scorpion-sting pain",
+   "sanskrit": "",
+   "meaning": "When aggravated, Amavata causes painful swelling of the joints of the hands, feet, head, ankles, sacrum, knees and thighs; the affected part hurts as if stung by scorpions.",
+   "keywords": [
+    "amavata",
+    "sandhi",
+    "joint",
+    "swelling",
+    "scorpion",
+    "vrishchika",
+    "pain",
+    "pravriddha"
+   ],
+   "verified": true
+  },
+  {
+   "id": "cd25_chikitsa",
+   "text": "Chakradatta",
+   "location": "Amavata Chikitsa 25.1",
+   "topic": "Amavata - line of treatment",
+   "sanskrit": "laṅghanaṃ svedanaṃ tiktaṃ dīpanāni kaṭūni ca / virecanaṃ snehapānaṃ bastayaścāmamārute",
+   "meaning": "In Amavata: fasting (langhana), sudation, bitter and pungent agni-kindling drugs, purgation, internal oleation and basti.",
+   "keywords": [
+    "amavata",
+    "treatment",
+    "chikitsa",
+    "sutra",
+    "langhana",
+    "swedana",
+    "virechana",
+    "basti",
+    "deepana",
+    "snehapana"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_chi6_nidana",
+   "text": "Charaka Samhita",
+   "location": "Chikitsasthana 6.4",
+   "topic": "Prameha - causes",
+   "sanskrit": "āsyāsukhaṃ svapnasukhaṃ dadhīni grāmyaudakānūparasāḥ payāṃsi / navānnapānaṃ guḍavaikṛtaṃ ca pramehahetuḥ kaphakṛcca sarvam",
+   "meaning": "Causes of prameha: indulgence in sitting and sleep, curd, meat of domestic, aquatic and marshy animals, milk, new grains and drinks, jaggery products, and everything that increases kapha.",
+   "keywords": [
+    "prameha",
+    "diabetes",
+    "madhumeha",
+    "cause",
+    "nidana",
+    "kapha",
+    "curd",
+    "sleep",
+    "sedentary",
+    "jaggery"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_chi6_sthula_pramehi",
+   "text": "Charaka Samhita",
+   "location": "Chikitsasthana 6.15",
+   "topic": "Prameha - obese versus lean patient",
+   "sanskrit": "sthūlaḥ pramehī balavānihaikaḥ kṛśastathaikaḥ paridurbalaśca / saṃbṛṃhaṇaṃ tatra kṛśasya kāryaṃ saṃśodhanaṃ doṣabalādhikasya",
+   "meaning": "Prameha patients are of two kinds: obese and strong, or lean and weak. The lean are nourished; the strong with excess dosha receive purification (shodhana).",
+   "keywords": [
+    "prameha",
+    "diabetes",
+    "sthula",
+    "krisha",
+    "obese",
+    "lean",
+    "treatment",
+    "chikitsa",
+    "shodhana",
+    "brimhana"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_su21_nidana",
+   "text": "Charaka Samhita",
+   "location": "Sutrasthana 21.4",
+   "topic": "Sthaulya - causes",
+   "sanskrit": "",
+   "meaning": "Overeating, heavy, sweet, cold and unctuous food, lack of exercise, day sleep and lack of mental exertion cause excessive obesity.",
+   "keywords": [
+    "sthaulya",
+    "obesity",
+    "obese",
+    "medoroga",
+    "cause",
+    "nidana",
+    "overeating",
+    "day sleep",
+    "exercise"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_su21_ashtadosha",
+   "text": "Charaka Samhita",
+   "location": "Sutrasthana 21.4",
+   "topic": "Sthaulya - eight defects of the obese",
+   "sanskrit": "āyuṣo hrāso javoparodhaḥ kṛcchravyavāyatā daurbalyaṃ daurgandhyaṃ svedābādhaḥ kṣudatimātraṃ pipāsātiyogaśceti",
+   "meaning": "The obese suffer shortened life, reduced agility, difficulty in sexual function, weakness, body odour, excessive sweating, excessive hunger and excessive thirst.",
+   "keywords": [
+    "sthaulya",
+    "obesity",
+    "obese",
+    "medoroga",
+    "weight",
+    "atisthaula",
+    "symptoms",
+    "hunger",
+    "thirst",
+    "sweat",
+    "odour"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_su21_samprapti",
+   "text": "Charaka Samhita",
+   "location": "Sutrasthana 21.5-6",
+   "topic": "Sthaulya - pathogenesis (meda obstructs vata in the koshtha)",
+   "sanskrit": "",
+   "meaning": "Meda obstructs the channels; vata, confined to the koshtha, kindles agni and absorbs food quickly, so the obese person craves food and grows fatter.",
+   "keywords": [
+    "sthaulya",
+    "obesity",
+    "samprapti",
+    "pathogenesis",
+    "meda",
+    "vata",
+    "agni",
+    "koshtha",
+    "hunger"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_su21_chikitsa",
+   "text": "Charaka Samhita",
+   "location": "Sutrasthana 21.20",
+   "topic": "Sthaulya and karshya - principle of treatment",
+   "sanskrit": "guru cātarpaṇaṃ ceṣṭaṃ sthūlānāṃ karśanaṃ prati / kṛśānāṃ bṛṃhaṇārthaṃ ca laghu santarpaṇaṃ ca yat",
+   "meaning": "To reduce the obese, give food that is heavy yet non-nourishing; to build up the emaciated, food that is light yet nourishing.",
+   "keywords": [
+    "sthaulya",
+    "obesity",
+    "obese",
+    "weight",
+    "loss",
+    "treatment",
+    "chikitsa",
+    "karshya",
+    "diet",
+    "apatarpana",
+    "guru"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_su21_chikitsa2",
+   "text": "Charaka Samhita",
+   "location": "Sutrasthana 21.21",
+   "topic": "Sthaulya - therapies",
+   "sanskrit": "vātaghnānyannapānāni śleṣmamedoharāṇi ca / rūkṣoṣṇā bastayastīkṣṇā rūkṣāṇyudvartanāni ca",
+   "meaning": "For the obese: food and drink that pacify vata and reduce kapha and meda, dry and hot sharp enemas, and dry powder massage (udvartana).",
+   "keywords": [
+    "sthaulya",
+    "obesity",
+    "treatment",
+    "udvartana",
+    "basti",
+    "lekhana",
+    "medohara",
+    "kapha"
+   ],
+   "verified": true
+  },
+  {
+   "id": "garbhini_caution",
+   "text": "Charaka Samhita",
+   "location": "Sharirasthana 8.21 (garbhopaghatakara bhava)",
+   "topic": "Pregnancy - harmful therapies to avoid",
+   "sanskrit": "",
+   "meaning": "In pregnancy, strong purification (vamana, virechana), harsh and sharp drugs, heavy exertion and fasting are to be avoided because they harm the foetus.",
+   "keywords": [
+    "garbhini",
+    "pregnancy",
+    "pregnant",
+    "contraindication",
+    "virechana",
+    "vamana",
+    "tikshna",
+    "lekhana",
+    "avoid"
+   ],
+   "verified": true
+  },
+  {
+   "id": "mn51_nidana",
+   "text": "Madhava Nidana",
+   "location": "Amlapitta Nidana 51.1",
+   "topic": "Amlapitta - causes",
+   "sanskrit": "viruddhaduṣṭāmlavidāhipittaprakopipānānnabhujo vidagdham / pittaṃ svahetūpacitaṃ purā yat tadamlapittaṃ pravadanti santaḥ",
+   "meaning": "When pitta, already increased by its own causes, is further vitiated by incompatible, spoiled, sour, burning and pitta-provoking food and drink, it becomes 'vidagdha' and is called Amlapitta.",
+   "keywords": [
+    "amlapitta",
+    "acidity",
+    "hyperacidity",
+    "cause",
+    "nidana",
+    "sour",
+    "amla",
+    "vidahi",
+    "spicy",
+    "pitta"
+   ],
+   "verified": true
+  },
+  {
+   "id": "mn51_rupa",
+   "text": "Madhava Nidana",
+   "location": "Amlapitta Nidana 51.2",
+   "topic": "Amlapitta - signs",
+   "sanskrit": "avipākaklamotkleśatiktāmlodgāragauravaiḥ / hṛtkaṇṭhadāharucibhiścāmlapittaṃ vadedbhiṣak",
+   "meaning": "Indigestion, fatigue, nausea, bitter-sour belching, heaviness, burning in the chest and throat, and loss of taste indicate Amlapitta.",
+   "keywords": [
+    "amlapitta",
+    "symptoms",
+    "rupa",
+    "lakshana",
+    "belching",
+    "udgara",
+    "burning",
+    "heartburn",
+    "daha",
+    "nausea"
+   ],
+   "verified": true
+  },
+  {
+   "id": "redflag_gi",
+   "text": "Clinical safety guideline (non-classical)",
+   "location": "Upper-GI alarm features",
+   "topic": "Red flags in dyspepsia - refer before treating",
+   "sanskrit": "",
+   "meaning": "Black (tarry) stools, vomiting of blood, difficulty swallowing, unintended weight loss, anaemia or new symptoms after 45 years are alarm features. Refer for endoscopy and blood tests before treating as simple Amlapitta.",
+   "keywords": [
+    "red flag",
+    "alarm",
+    "melena",
+    "black stool",
+    "weight loss",
+    "endoscopy",
+    "refer",
+    "referral",
+    "bleeding",
+    "amlapitta"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_chi17_tamaka",
+   "text": "Charaka Samhita",
+   "location": "Chikitsasthana 17.55-62",
+   "topic": "Tamaka Shvasa - pathogenesis and signs",
+   "sanskrit": "pratilomaṃ yadā vāyuḥ srotāṃsi pratipadyate / grīvāṃ śiraśca saṅgṛhya śleṣmāṇaṃ samudīrya ca ... āsīno labhate saukhyamuṣṇaṃ caivābhinandati",
+   "meaning": "Vata moving in the reverse direction enters the channels, seizes the neck and head and stirs up kapha, causing wheezing breathlessness; the patient finds relief sitting up and welcomes warmth. It worsens with clouds, cold and kapha-increasing things.",
+   "keywords": [
+    "tamaka",
+    "shvasa",
+    "asthma",
+    "breathlessness",
+    "wheeze",
+    "ghurghuraka",
+    "kapha",
+    "vata",
+    "sitting",
+    "warm",
+    "cold",
+    "cloudy"
+   ],
+   "verified": true
+  },
+  {
+   "id": "ch_chi17_chikitsa",
+   "text": "Charaka Samhita",
+   "location": "Chikitsasthana 17.71-73",
+   "topic": "Shvasa - first line of treatment",
+   "sanskrit": "",
+   "meaning": "The patient with hikka-shvasa is first anointed with oil mixed with salt and given sudation; this loosens the adherent kapha in the channels, after which vamana or other purification is given according to strength.",
+   "keywords": [
+    "shvasa",
+    "tamaka",
+    "asthma",
+    "treatment",
+    "chikitsa",
+    "snehana",
+    "swedana",
+    "lavana taila",
+    "vamana"
+   ],
+   "verified": true
+  },
+  {
+   "id": "redflag_asthma",
+   "text": "Clinical safety guideline (non-classical)",
+   "location": "Acute asthma danger signs",
+   "topic": "Red flags in breathlessness",
+   "sanskrit": "",
+   "meaning": "Inability to speak in full sentences, bluish lips, SpO2 below 92%, silent chest or exhaustion need emergency referral. Rescue inhalers must not be stopped.",
+   "keywords": [
+    "red flag",
+    "asthma",
+    "emergency",
+    "spo2",
+    "inhaler",
+    "cyanosis",
+    "referral"
+   ],
+   "verified": true
+  },
+  {
+   "id": "redflag_diabetes",
+   "text": "Clinical safety guideline (non-classical)",
+   "location": "Diabetes safety",
+   "topic": "Prescribed diabetes medicines and danger signs",
+   "sanskrit": "",
+   "meaning": "Prescribed glucose-lowering medicines must not be stopped without the prescribing doctor; Ayurvedic treatment is added with sugar monitoring. Foot ulcers, drowsiness, or extreme thirst with weight loss need referral.",
+   "keywords": [
+    "diabetes",
+    "prameha",
+    "metformin",
+    "insulin",
+    "red flag",
+    "referral",
+    "monitoring"
+   ],
+   "verified": true
+  },
+  {
+   "id": "visha_dravya",
+   "text": "Rasa Shastra safety principle",
+   "location": "Visha / Upavisha dravyas",
+   "topic": "Poisonous drugs need shodhana and exact dose",
+   "sanskrit": "",
+   "meaning": "Visha and upavisha dravyas such as Vatsanabha, Kupilu and Bhallataka are used only after shodhana, in exact small doses, for a limited period, under supervision.",
+   "keywords": [
+    "visha",
+    "upavisha",
+    "vatsanabha",
+    "kupilu",
+    "bhallataka",
+    "shodhana",
+    "dose",
+    "poison",
+    "safety"
+   ],
+   "verified": true
+  }
+ ]
+}

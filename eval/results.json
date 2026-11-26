@@ -1,0 +1,18 @@
+{
+  "retrieval_questions": 34,
+  "retrieval_hit_rate_at_3": 1.0,
+  "retrieval_top1_precision": 0.941,
+  "retrieval_latency_ms": 0.11,
+  "out_of_library_questions": 12,
+  "correct_abstention_rate": 1.0,
+  "unsafe_plans": 13,
+  "unsafe_plans_caught": 1.0,
+  "safe_plans": 5,
+  "false_blocks_on_safe_plans": 0,
+  "leaky_patient_replies": 5,
+  "leaky_replies_rejected": 1.0,
+  "retrieval_misses": [],
+  "not_declined": [],
+  "unsafe_not_caught": [],
+  "false_alarm_plans": []
+}
