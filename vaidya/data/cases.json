@@ -142,7 +142,9 @@
        "viruddhahara",
        "incompatible",
        "curd at night",
-       "dadhi at night"
+       "dadhi at night",
+       "viruddha ahara",
+       "dadhi ratri"
       ],
       [
        "divaswapna",
@@ -183,23 +185,37 @@
        "sandhi shotha",
        "shotha",
        "swelling",
-       "shopha"
+       "shopha",
+       "sandhishotha",
+       "joint swelling",
+       "swelling of joints",
+       "inflammation"
       ],
       [
        "shula",
        "pain",
        "vedana",
-       "ruja"
+       "ruja",
+       "sandhishula",
+       "joint pain",
+       "arthralgia",
+       "shoola"
       ],
       [
        "gaurava",
        "heaviness",
-       "heavy"
+       "heavy",
+       "guruta",
+       "heavy body",
+       "body heaviness"
       ],
       [
        "aruchi",
        "anorexia",
-       "loss of taste"
+       "loss of taste",
+       "no appetite",
+       "loss of appetite",
+       "ruchi nasha"
       ]
      ],
      "optional": [
@@ -405,13 +421,20 @@
       [
        "swedana",
        "sweda",
-       "valuka"
+       "valuka",
+       "ruksha sweda",
+       "ruksha swedana",
+       "valuka sweda",
+       "sudation"
       ],
       [
        "deepana",
        "pachana",
        "tikta",
-       "katu"
+       "katu",
+       "agni deepana",
+       "amapachana",
+       "ama pachana"
       ],
       [
        "virechana",
@@ -442,7 +465,15 @@
        "rasnasaptaka",
        "rasna",
        "simhanada",
-       "eranda"
+       "eranda",
+       "simhanada guggulu",
+       "yogaraja guggulu",
+       "amavatari",
+       "dashamula",
+       "punarnavadi",
+       "maharasnadi",
+       "vaishvanara churna",
+       "ajmodadi"
       ],
       [
        "ushnodaka",
@@ -647,18 +678,36 @@
        "karapada",
        "burning palms",
        "burning of palms",
-       "daha"
+       "daha",
+       "burning feet",
+       "burning of feet",
+       "burning soles",
+       "burning hands",
+       "pada daha",
+       "hasta pada daha",
+       "karapada daha"
       ],
       [
        "madhurya",
        "sweet taste",
-       "mukha madhurya"
+       "mukha madhurya",
+       "asya madhurya",
+       "sweetness in mouth",
+       "sweet mouth"
       ]
      ],
      "optional": [
       [
        "alasya",
        "lethargy"
+      ],
+      [
+       "upadeha",
+       "coated tongue",
+       "jihva lipta",
+       "dantadi mala",
+       "mala in teeth",
+       "sticky mouth"
       ]
      ],
      "verses": []
@@ -670,12 +719,23 @@
        "prabhuta",
        "excess urine",
        "polyuria",
-       "frequent urination"
+       "frequent urination",
+       "bahumutra",
+       "bahu mutra",
+       "prabhutamutrata",
+       "frequent",
+       "frequency",
+       "increased urination",
+       "large quantity",
+       "nocturia"
       ],
       [
        "avila",
        "turbid",
-       "cloudy"
+       "cloudy",
+       "hazy",
+       "avila mutra",
+       "avilamutrata"
       ]
      ],
      "optional": [
@@ -683,6 +743,13 @@
        "daurbalya",
        "weakness",
        "tired"
+      ],
+      [
+       "ants",
+       "pipilika",
+       "madhura mutra",
+       "sweet urine",
+       "glycosuria"
       ]
      ],
      "verses": []
@@ -710,7 +777,8 @@
       [
        "meda",
        "medas",
-       "fat"
+       "fat",
+       "medo dhatu"
       ]
      ],
      "optional": [
@@ -741,7 +809,9 @@
       ],
       [
        "medovaha",
-       "medo vaha"
+       "medo vaha",
+       "meda vaha",
+       "medas vaha"
       ]
      ],
      "optional": [
@@ -800,7 +870,21 @@
       [
        "mutrakricchra",
        "mutra kricchra",
-       "uti"
+       "uti",
+       "mutraghata",
+       "diabetes insipidus",
+       "udakameha",
+       "ikshumeha",
+       "sandrameha",
+       "pishtameha",
+       "shukrameha",
+       "sikatameha",
+       "lalameha",
+       "surameha",
+       "shanairmeha",
+       "prameha types",
+       "pittaja prameha",
+       "vataja prameha"
       ]
      ],
      "optional": [
@@ -818,7 +902,10 @@
      "required": [
       [
        "apatarpana",
-       "langhana"
+       "langhana",
+       "karshana",
+       "guru apatarpana",
+       "apatarpana chikitsa"
       ],
       [
        "shodhana",
@@ -828,13 +915,17 @@
       [
        "vyayama",
        "exercise",
-       "walking"
+       "walking",
+       "physical activity"
       ]
      ],
      "optional": [
       [
        "kapha medohara",
        "medohara"
+      ],
+      [
+       "shamana"
       ]
      ],
      "verses": [
@@ -852,7 +943,17 @@
        "chandraprabha",
        "shilajatu",
        "guduchi",
-       "nishamalaki"
+       "nishamalaki",
+       "vasanta kusumakara",
+       "nimba",
+       "nimbadi",
+       "jambu",
+       "meshashringi",
+       "gudmar",
+       "asanadi",
+       "phalatrikadi",
+       "mamajjaka",
+       "katakakhadiradi"
       ],
       [
        "yava",
@@ -1032,20 +1133,36 @@
        "chala",
        "flabby",
        "sphik",
-       "udara"
+       "udara",
+       "chala sphik",
+       "chala udara",
+       "pendulous",
+       "flabby abdomen"
       ],
       [
        "kshudha",
        "hunger",
        "pipasa",
-       "thirst"
+       "thirst",
+       "atikshudha",
+       "ati kshudha",
+       "excess hunger",
+       "increased appetite",
+       "excessive thirst",
+       "atipipasa"
       ],
       [
        "sveda",
        "sweat",
        "daurgandhya",
        "odour",
-       "odor"
+       "odor",
+       "atisveda",
+       "excess sweating",
+       "sweating",
+       "durgandha",
+       "body odour",
+       "foul smell"
       ]
      ],
      "optional": [
@@ -1187,7 +1304,9 @@
       ],
       [
        "medohara",
-       "lekhana"
+       "lekhana",
+       "kapha medohara",
+       "karshana"
       ]
      ],
      "optional": [
@@ -1212,7 +1331,10 @@
        "urine pregnancy",
        "beta hcg",
        "rule out pregnancy",
-       "exclude pregnancy"
+       "exclude pregnancy",
+       "urine pregnancy test",
+       "pregnancy test first",
+       "hcg"
       ],
       [
        "walk",
@@ -1361,7 +1483,10 @@
        "vidahi",
        "spicy",
        "katu",
-       "teekshna"
+       "teekshna",
+       "spicy food",
+       "chilli",
+       "masala"
       ],
       [
        "ratri jagarana",
@@ -1393,11 +1518,22 @@
       [
        "udgara",
        "belching",
-       "eructation"
+       "eructation",
+       "amlodgara",
+       "tiktamlodgara",
+       "sour belching",
+       "acid reflux",
+       "regurgitation"
       ],
       [
        "daha",
-       "burning"
+       "burning",
+       "hritkantha daha",
+       "hrit daha",
+       "kantha daha",
+       "heartburn",
+       "burning chest",
+       "retrosternal burning"
       ]
      ],
      "optional": [
@@ -1484,7 +1620,11 @@
      "required": [
       [
        "amlapitta",
-       "amla pitta"
+       "amla pitta",
+       "urdhvaga amlapitta",
+       "hyperacidity",
+       "gerd",
+       "acid peptic"
       ]
      ],
      "optional": [
@@ -1689,7 +1829,11 @@
        "raja",
        "dust",
        "dhuma",
-       "smoke"
+       "smoke",
+       "dust allergy",
+       "rajas",
+       "pollution",
+       "allergen"
       ]
      ],
      "optional": [
@@ -1712,7 +1856,10 @@
        "ghurghuraka",
        "ghurghur",
        "wheeze",
-       "whistling"
+       "whistling",
+       "wheezing",
+       "whistling sound",
+       "rhonchi"
       ],
       [
        "kapha",
@@ -1723,7 +1870,12 @@
       [
        "sitting",
        "asino",
-       "sit up"
+       "sit up",
+       "asino labhate saukhyam",
+       "relief on sitting",
+       "orthopnoea",
+       "orthopnea",
+       "better sitting"
       ]
      ],
      "optional": [
@@ -1864,7 +2016,11 @@
       [
        "snehana",
        "abhyanga",
-       "taila"
+       "taila",
+       "lavana taila abhyanga",
+       "urah abhyanga",
+       "chest abhyanga",
+       "sneha"
       ],
       [
        "swedana",
@@ -1900,7 +2056,12 @@
        "agastya",
        "haridrakhanda",
        "kantakari",
-       "pippali"
+       "pippali",
+       "shvasa kasa chintamani",
+       "bharangi",
+       "bharangyadi",
+       "dashamula katutraya",
+       "chyavanaprasha"
       ],
       [
        "ushnodaka",

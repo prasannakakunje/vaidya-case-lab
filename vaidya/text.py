@@ -54,6 +54,8 @@ def contains_phrase(text: str, phrase: str, threshold: int = 88) -> bool:
         return False
     if f" {p} " in f" {t} " or (len(p) >= 5 and p in t):
         return True
+    if len(p) >= 6 and p.replace(" ", "") in t.replace(" ", ""):
+        return True  # 'udaka meha' = 'udakameha', 'kara pada daha' = 'karapada daha'
     t_words, n = t.split(), len(p.split())
     if n == 1 and len(p) >= 3 and any(w.startswith(p) for w in t_words):
         return True  # word stem: 'walk' matches 'walking', 'pregnan' matches 'pregnancy'

@@ -158,3 +158,28 @@ def test_comparison_flags_unverifiable_citations():
     assert c.plain and c.plain_cites_texts
     assert c.grounded.verses and c.grounded.verses[0].id == "cd25_chikitsa"
     assert c.grounded.answer is None  # the leaky answer is not supported by the Amavata verses
+
+
+def test_words_written_with_or_without_spaces_match():
+    assert contains_phrase("udaka meha", "udakameha")
+    assert contains_phrase("bahumutra and ants", "bahu mutra")
+
+
+def test_fatigue_is_not_a_weight_question():
+    from vaidya.cases import question_topics
+    assert "weight" not in question_topics("tiredness or fatigue?")
+
+
+def test_hindi_and_kannada_romanised_questions_are_understood():
+    from vaidya.cases import question_topics
+    assert "appetite" in question_topics("kya aapko pyas zyada lagti hai?")
+    assert "appetite" in question_topics("ninage hasivu hege ide?")
+
+
+def test_dr_prasanna_prameha_answers_are_recognised():
+    agent = ParikshaAgent(NO_MODEL, LIB)
+    a = agent.grade(CASES["case02"], {"purvarupa": "burning feet, coated tongue",
+                                      "rupa": "bahumutra, ants coming to urine",
+                                      "vyavachedaka": "udaka meha"}, set(), set())
+    f = {r.field: r for r in a.fields}
+    assert f["purvarupa"].score > 0 and f["rupa"].score > 0 and f["vyavachedaka"].score == 1

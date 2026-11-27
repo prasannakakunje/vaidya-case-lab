@@ -192,7 +192,7 @@ def run_compare(question):
                 f"Status: {ENGINE.status}_")
         return note, render_grounded(PRAMANA.ask(question, use_model=False))
     c = compare(ENGINE, PRAMANA, question)
-    plain = c.plain or "_No answer generated._"
+    plain = c.plain or (f"_AyurParam returned no answer. {('Error: ' + ENGINE.last_error) if ENGINE.last_error else ''}_")
     warn = ("\n\n> **Unverifiable:** this answer names classical texts or chapters, but nothing checks that they are "
             "correct, and no verse is shown." if c.plain_cites_texts else
             "\n\n> **No source:** nothing in this answer can be traced to a verse.")

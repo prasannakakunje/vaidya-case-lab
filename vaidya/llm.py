@@ -45,11 +45,24 @@ def _zerogpu_generate(prompt: str, max_tokens: int, temperature: float) -> str:
     inputs = tok(prompt, return_tensors="pt")
     inputs.pop("token_type_ids", None)
     inputs = {k: v.to("cuda") for k, v in inputs.items()}
+    return _hf_generate(tok, model, inputs, max_tokens, temperature)
+
+
+def _hf_generate(tok, model, inputs, max_tokens: int, temperature: float) -> str:
+    """Generate with transformers. AyurParam's own model code can fail with the KV cache on some
+    transformers versions, so retry once without the cache before giving up."""
+    import torch
+    settings = dict(max_new_tokens=max_tokens, do_sample=temperature > 0, temperature=max(temperature, 0.01),
+                    top_p=0.9, top_k=50, eos_token_id=tok.eos_token_id, pad_token_id=tok.eos_token_id)
     with torch.no_grad():
-        out = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=temperature > 0,
-                             temperature=max(temperature, 0.01), top_p=0.9, top_k=50,
-                             eos_token_id=tok.eos_token_id, pad_token_id=tok.eos_token_id)
-    return tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+        try:
+            out = model.generate(**inputs, **settings)
+        except Exception as e:  # noqa: BLE001
+            log.warning("generate() failed (%s); retrying without KV cache", e)
+            out = model.generate(**inputs, use_cache=False, **settings)
+    text = tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+    log.info("AyurParam raw output: %r", text[:300])
+    return text
 
 
 def build_prompt(user: str, context: str | None = None) -> str:
@@ -59,6 +72,10 @@ def build_prompt(user: str, context: str | None = None) -> str:
 
 
 def _clean(text: str) -> str:
+    text = text.strip()
+    for marker in ("<assistant>", "Patient:", "Answer:"):
+        if text.startswith(marker):
+            text = text[len(marker):].strip()
     for s in STOPS:
         text = text.split(s)[0]
     return text.strip()
@@ -75,6 +92,7 @@ class Engine:
         self._tokenizer = None
         self._lock = threading.Lock()
         self._ready = threading.Event()
+        self.last_error = ""
 
     # ---------- loading ----------
     def start(self) -> "Engine":
@@ -157,27 +175,23 @@ class Engine:
         try:
             with self._lock:
                 if self.name == "zerogpu":
-                    return _clean(_zerogpu_generate(prompt, max_tokens, temperature))
+                    return _clean(_zerogpu_generate(prompt, max_tokens, temperature)) or None
                 if self.name == "llamacpp":
                     out = self._model(prompt, max_tokens=max_tokens, temperature=temperature, top_p=0.9,
                                       top_k=50, stop=STOPS, echo=False)
                     return _clean(out["choices"][0]["text"])
-                return _clean(self._generate_hf(prompt, max_tokens, temperature))
+                return _clean(self._generate_hf(prompt, max_tokens, temperature)) or None
         except Exception as e:  # noqa: BLE001
-            log.warning("Generation failed: %s", e)
+            log.warning("Generation failed: %s: %s", type(e).__name__, e)
+            self.last_error = f"{type(e).__name__}: {e}"
             return None
 
     def _generate_hf(self, prompt: str, max_tokens: int, temperature: float) -> str:
-        import torch
         tok = self._tokenizer
         inputs = tok(prompt, return_tensors="pt")
         inputs.pop("token_type_ids", None)
         inputs = {k: v.to(self._model.device) for k, v in inputs.items()}
-        with torch.no_grad():
-            out = self._model.generate(**inputs, max_new_tokens=max_tokens, do_sample=temperature > 0,
-                                       temperature=max(temperature, 0.01), top_p=0.9, top_k=50,
-                                       eos_token_id=tok.eos_token_id, pad_token_id=tok.eos_token_id)
-        return tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+        return _hf_generate(tok, self._model, inputs, max_tokens, temperature)
 
 
 class FakeEngine(Engine):
