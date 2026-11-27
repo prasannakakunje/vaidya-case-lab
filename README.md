@@ -73,11 +73,13 @@ AyurParam runs in one of three ways (`VAIDYA_BACKEND`):
 
 | Backend | Where | Model |
 | --- | --- | --- |
-| `llamacpp` | Hugging Face Space (free CPU), college lab PCs, offline | 4-bit GGUF build of AyurParam (`A-Aryam/AyurParam-GGUF`, about 1.7 GB) |
+| `zerogpu` | Hugging Face Space on ZeroGPU (the hosted demo) | `bharatgenai/AyurParam`, bf16; the GPU is attached only while a reply is generated |
+| `llamacpp` | Hugging Face Space on CPU, college lab PCs, offline | 4-bit GGUF build of AyurParam (`A-Aryam/AyurParam-GGUF`, about 1.7 GB) |
 | `transformers` | Google Colab T4 GPU (see `notebooks/run_on_colab.ipynb`) | `bharatgenai/AyurParam`, fp16 |
 | `none` | Anywhere | No model: patient replies and feedback come straight from the case file |
 
-`auto` (default) picks a GPU if present, otherwise the 4-bit build, otherwise case-file mode. Prompts use AyurParam's
+`auto` (default) picks ZeroGPU on a ZeroGPU Space, then a local GPU, then the 4-bit CPU build, then case-file mode.
+If GPU time runs out, replies fall back to the case-file text, so the app never stops working. Prompts use AyurParam's
 own format, `<context> … <user> … <assistant>`.
 
 ## Evaluation (team test set, v1)

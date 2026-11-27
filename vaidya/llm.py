@@ -1,11 +1,13 @@
 """AyurParam language engine.
 
-Three backends, chosen by the VAIDYA_BACKEND environment variable:
-  llamacpp     - 4-bit GGUF build of AyurParam on CPU (hosted demo, college lab PCs)
+Backends, chosen by the VAIDYA_BACKEND environment variable:
+  zerogpu      - full bharatgenai/AyurParam on a Hugging Face ZeroGPU Space
+                 (GPU attached only while a reply is generated)
+  llamacpp     - 4-bit GGUF build of AyurParam on CPU (CPU Space, college lab PCs)
   transformers - full bharatgenai/AyurParam on a GPU (Google Colab)
   none         - no model; the app still runs, with patient replies and
                  feedback taken straight from the faculty case file
-  auto         - (default) GPU if present, else llamacpp, else none
+  auto         - (default) ZeroGPU on a ZeroGPU Space, else a local GPU, else llamacpp, else none
 
 AyurParam's own prompt format is used: '<context> ... <user> ... <assistant>'.
 The model is loaded in a background thread so the interface opens at once.
@@ -23,6 +25,31 @@ HF_MODEL = os.getenv("VAIDYA_HF_MODEL", "bharatgenai/AyurParam")
 GGUF_REPO = os.getenv("VAIDYA_GGUF_REPO", "A-Aryam/AyurParam-GGUF")
 GGUF_FILE = os.getenv("VAIDYA_GGUF_FILE", "*Q4_K_M.gguf")
 STOPS = ["<user>", "<context>", "<system_prompt>", "Doctor:", "\n\n\n"]
+ON_ZEROGPU = os.getenv("SPACES_ZERO_GPU", "").lower() in ("true", "1")
+
+# ---------- ZeroGPU: the decorated function must live at module level ----------
+try:  # the 'spaces' package exists only on Hugging Face Spaces
+    import spaces  # type: ignore
+    _gpu = spaces.GPU(duration=60)
+except Exception:  # noqa: BLE001
+    def _gpu(fn):
+        return fn
+
+_HF: dict = {"model": None, "tok": None}
+
+
+@_gpu
+def _zerogpu_generate(prompt: str, max_tokens: int, temperature: float) -> str:
+    import torch
+    tok, model = _HF["tok"], _HF["model"]
+    inputs = tok(prompt, return_tensors="pt")
+    inputs.pop("token_type_ids", None)
+    inputs = {k: v.to("cuda") for k, v in inputs.items()}
+    with torch.no_grad():
+        out = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=temperature > 0,
+                             temperature=max(temperature, 0.01), top_p=0.9, top_k=50,
+                             eos_token_id=tok.eos_token_id, pad_token_id=tok.eos_token_id)
+    return tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
 
 
 def build_prompt(user: str, context: str | None = None) -> str:
@@ -55,11 +82,14 @@ class Engine:
             self.status = "Running without a language model (case-file mode)"
             self._ready.set()
             return self
-        threading.Thread(target=self._load, daemon=True).start()
+        if self.requested == "zerogpu" or (self.requested == "auto" and ON_ZEROGPU):
+            self._load()  # ZeroGPU needs the model placed on 'cuda' while the Space starts
+        else:
+            threading.Thread(target=self._load, daemon=True).start()
         return self
 
     def _load(self):
-        order = [self.requested] if self.requested in ("llamacpp", "transformers") else self._auto_order()
+        order = [self.requested] if self.requested in ("zerogpu", "llamacpp", "transformers") else self._auto_order()
         for name in order:
             try:
                 self.status = f"Loading AyurParam ({name})... this takes a few minutes on first start"
@@ -78,6 +108,8 @@ class Engine:
 
     @staticmethod
     def _auto_order() -> list[str]:
+        if ON_ZEROGPU:
+            return ["zerogpu", "llamacpp"]
         try:
             import torch
             if torch.cuda.is_available():
@@ -90,6 +122,15 @@ class Engine:
         from llama_cpp import Llama
         self._model = Llama.from_pretrained(repo_id=GGUF_REPO, filename=GGUF_FILE, n_ctx=2048,
                                             n_threads=max(1, os.cpu_count() or 2), verbose=False)
+
+    def _load_zerogpu(self):
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        tok = AutoTokenizer.from_pretrained(HF_MODEL, trust_remote_code=False)
+        model = AutoModelForCausalLM.from_pretrained(HF_MODEL, trust_remote_code=True, torch_dtype=torch.bfloat16)
+        model.to("cuda").eval()
+        _HF["tok"], _HF["model"] = tok, model
+        self._tokenizer, self._model = tok, model
 
     def _load_transformers(self):
         import torch
@@ -115,6 +156,8 @@ class Engine:
             return None
         try:
             with self._lock:
+                if self.name == "zerogpu":
+                    return _clean(_zerogpu_generate(prompt, max_tokens, temperature))
                 if self.name == "llamacpp":
                     out = self._model(prompt, max_tokens=max_tokens, temperature=temperature, top_p=0.9,
                                       top_k=50, stop=STOPS, echo=False)

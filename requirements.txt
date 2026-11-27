@@ -1,8 +1,14 @@
-# Prefer ready-made wheels so llama-cpp-python installs in seconds instead of compiling.
+# Works on both Hugging Face Space hardware options:
+#   ZeroGPU   -> full AyurParam on GPU (torch + transformers)
+#   CPU basic -> 4-bit AyurParam on CPU (llama-cpp-python)
 --prefer-binary
 --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
 gradio==5.50.0
 huggingface_hub>=0.25,<1.0
 rank_bm25>=0.2.2
 rapidfuzz>=3.0
+torch
+transformers>=4.53
+accelerate>=0.30
+spaces
 llama-cpp-python>=0.3.2
