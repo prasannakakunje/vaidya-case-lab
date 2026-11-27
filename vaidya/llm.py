@@ -26,6 +26,33 @@ GGUF_REPO = os.getenv("VAIDYA_GGUF_REPO", "A-Aryam/AyurParam-GGUF")
 GGUF_FILE = os.getenv("VAIDYA_GGUF_FILE", "*Q4_K_M.gguf")
 STOPS = ["<user>", "<context>", "<system_prompt>", "Doctor:", "\n\n\n"]
 ON_ZEROGPU = os.getenv("SPACES_ZERO_GPU", "").lower() in ("true", "1")
+REPETITION_PENALTY = float(os.getenv("VAIDYA_REPETITION_PENALTY", "1.2"))
+
+
+def is_repetitive(text: str, n: int = 3, limit: int = 3) -> bool:
+    """True if any run of `n` words occurs more than `limit` times: the model is looping."""
+    import re as _re
+    w = _re.findall(r"\w+", text.lower())
+    counts: dict = {}
+    for i in range(len(w) - n + 1):
+        key = tuple(w[i:i + n])
+        counts[key] = counts.get(key, 0) + 1
+        if counts[key] > limit:
+            return True
+    return False
+
+
+def cut_repetition(text: str, n: int = 3) -> str:
+    """Keep the text up to the point where it starts repeating itself."""
+    import re as _re
+    tokens = list(_re.finditer(r"\w+", text))
+    seen: dict = {}
+    for i in range(len(tokens) - n + 1):
+        key = tuple(t.group().lower() for t in tokens[i:i + n])
+        if key in seen and seen[key] < i:
+            return text[:tokens[i].start()].rstrip(" ,;") + " …"
+        seen.setdefault(key, i)
+    return text
 
 # ---------- ZeroGPU: the decorated function must live at module level ----------
 try:  # the 'spaces' package exists only on Hugging Face Spaces
@@ -53,7 +80,8 @@ def _hf_generate(tok, model, inputs, max_tokens: int, temperature: float) -> str
     transformers versions, so retry once without the cache before giving up."""
     import torch
     settings = dict(max_new_tokens=max_tokens, do_sample=temperature > 0, temperature=max(temperature, 0.01),
-                    top_p=0.9, top_k=50, eos_token_id=tok.eos_token_id, pad_token_id=tok.eos_token_id)
+                    top_p=0.9, top_k=50, repetition_penalty=REPETITION_PENALTY, no_repeat_ngram_size=4,
+                    eos_token_id=tok.eos_token_id, pad_token_id=tok.eos_token_id)
     with torch.no_grad():
         try:
             out = model.generate(**inputs, **settings)
@@ -178,7 +206,7 @@ class Engine:
                     return _clean(_zerogpu_generate(prompt, max_tokens, temperature)) or None
                 if self.name == "llamacpp":
                     out = self._model(prompt, max_tokens=max_tokens, temperature=temperature, top_p=0.9,
-                                      top_k=50, stop=STOPS, echo=False)
+                                      top_k=50, repeat_penalty=REPETITION_PENALTY, stop=STOPS, echo=False)
                     return _clean(out["choices"][0]["text"])
                 return _clean(self._generate_hf(prompt, max_tokens, temperature)) or None
         except Exception as e:  # noqa: BLE001

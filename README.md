@@ -105,7 +105,7 @@ by other Kayachikitsa faculty are the next steps.
 ```bash
 pip install -r requirements-dev.txt
 VAIDYA_BACKEND=none python app.py          # case-file mode, no model download
-pytest -q                                   # 33 tests
+pytest -q                                   # 34 tests
 python -m eval.run_eval
 ```
 

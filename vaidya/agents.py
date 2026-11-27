@@ -9,7 +9,7 @@ import re
 from dataclasses import dataclass, field
 
 from .cases import Case, Fact, reply_language, select_facts
-from .llm import Engine, build_prompt
+from .llm import Engine, build_prompt, cut_repetition, is_repetitive
 from .retrieval import PramanaLibrary, Verse
 from .rules import Alert, check_plan
 from .text import contains_phrase, fold, folded, words
@@ -82,7 +82,7 @@ class RogiAgent:
 
     @staticmethod
     def _faithful(text: str, case: Case, facts: list[Fact]) -> bool:
-        if len(words(text)) < 3 or len(words(text)) > 80:
+        if len(words(text)) < 3 or len(words(text)) > 80 or is_repetitive(text):
             return False
         if any(contains_phrase(text, w) for w in DIAGNOSTIC_WORDS + [case.disease]):
             return False
@@ -188,7 +188,7 @@ class ParikshaAgent:
              "Using only the references above, explain in three short sentences what the student should learn. "
              "Cite the reference number like [1].")
         out = self.engine.generate(build_prompt(q, context), max_tokens=160, temperature=0.3)
-        if out and support_score(out, context + " " + gaps + " " + case.disease) >= 0.45:
+        if out and not is_repetitive(out) and support_score(out, context + " " + gaps + " " + case.disease) >= 0.45:
             return out, "AyurParam, grounded in the verses shown below"
         return None, ""
 
@@ -217,7 +217,7 @@ class PramanaAgent:
         prompt = build_prompt(f"Using only the references above, answer: {question} "
                               "Put the reference number like [1] after each point.", context)
         out = self.engine.generate(prompt, max_tokens=200, temperature=0.3)
-        if not out:
+        if not out or is_repetitive(out):
             return PramanaAnswer(verses, None, "verses-only")
         # Remove citations to references that were never given to the model.
         out = re.sub(r"\[(\d+)\]", lambda m: m.group(0) if 1 <= int(m.group(1)) <= len(verses) else "", out)
@@ -238,10 +238,14 @@ class Comparison:
     plain: str | None
     plain_cites_texts: bool
     grounded: PramanaAnswer
+    plain_looped: bool = False
 
 
 def compare(engine: Engine, pramana: PramanaAgent, question: str) -> Comparison:
     """Ask AyurParam the same question twice: on its own, and through the Pramana pipeline."""
     plain = engine.generate(build_prompt(question), max_tokens=200, temperature=0.3) if engine.ready else None
+    looped = bool(plain and is_repetitive(plain))
+    if looped:
+        plain = cut_repetition(plain)
     cites = bool(plain and CITATION_CLAIM.search(plain))
-    return Comparison(plain, cites, pramana.ask(question, use_model=True))
+    return Comparison(plain, cites, pramana.ask(question, use_model=True), looped)

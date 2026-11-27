@@ -183,3 +183,16 @@ def test_dr_prasanna_prameha_answers_are_recognised():
                                       "vyavachedaka": "udaka meha"}, set(), set())
     f = {r.field: r for r in a.fields}
     assert f["purvarupa"].score > 0 and f["rupa"].score > 0 and f["vyavachedaka"].score == 1
+
+
+def test_looping_output_is_detected_cut_and_rejected():
+    from vaidya.llm import cut_repetition, is_repetitive
+    loop = "The chikitsa sutra of Amavata is: " + ", ".join(["Ama-vrita Vata"] * 20)
+    assert is_repetitive(loop) and not is_repetitive("Langhana, swedana and deepana are given first.")
+    cut = cut_repetition(loop)
+    assert cut.count("Ama-vrita Vata") <= 2 and cut.endswith("…")
+    r = RogiAgent(FakeEngine("I have pain pain pain pain pain pain pain pain pain pain pain pain pain")).reply(
+        CASES["case01"], "How is your appetite?", set())
+    assert r.source == "case file"
+    agent = PramanaAgent(FakeEngine(loop), LIB)
+    assert agent.ask("What is the chikitsa sutra of Amavata?").answer is None

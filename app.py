@@ -196,6 +196,8 @@ def run_compare(question):
     warn = ("\n\n> **Unverifiable:** this answer names classical texts or chapters, but nothing checks that they are "
             "correct, and no verse is shown." if c.plain_cites_texts else
             "\n\n> **No source:** nothing in this answer can be traced to a verse.")
+    if c.plain_looped:
+        warn += "\n\n> **Looping:** the model started repeating itself; the repetition is cut off here."
     return plain + warn, render_grounded(c.grounded)
 
 
